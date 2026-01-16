@@ -1,0 +1,29 @@
+/* Link states */
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+a:active {
+    color: red;
+}
+
+/* ID selector for h2 */
+#others {
+    font-style: italic;
+    color: brown;
+}
+
+/* First letter of all paragraphs */
+p::first-letter {
+    color: red;
+    font-size: 1.2em;
+}

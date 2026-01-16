@@ -1,0 +1,44 @@
+/* 1. Center heading and make it dark blue */
+#title {
+  text-align: center;
+  color: darkblue;
+}
+
+/* 2. Center form and set width */
+form {
+  width: 400px;
+  margin: 0 auto; /* centers horizontally */
+}
+
+/* 3. and 4. Applying padding and box-sizing to inputs and textarea */
+input,
+textarea {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box; /* padding doesn't increase width */
+  margin-bottom: 10px;
+}
+
+/* 5. Style placeholder text */
+input::placeholder,
+textarea::placeholder {
+  color: lightgrey;
+  font-style: italic;
+}
+
+/* 6. Submit button cursor on hover */
+button:hover {
+  cursor: pointer;
+}
+
+/* 7. Table cell borders (not rows) */
+table th,
+table td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+/* 8. Table header background color */
+table thead {
+  background-color: lightgrey;
+}

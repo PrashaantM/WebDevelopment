@@ -1,0 +1,177 @@
+
+body {
+    font-size: 100%;
+    color: black;
+    background-color: #dce9f3;
+    font-family: Georgia, Cambria, "Times New Roman", serif;
+}
+
+
+html, body, header, footer, hgroup, nav, article, section,
+figure, figcaption, h1, h2, h3, ul, li, div, p, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+
+h1, h2, h3, nav, footer {
+    font-family: "Trebuchet MS", "Lucida Grande", Tahoma, sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 1.5em;
+    padding: 0.75em 0;
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+p {
+    font-size: 1em;
+    margin: 0.625em 0;
+}
+
+
+
+
+header,
+footer {
+    background-color: #1b1818e0;
+    color: white;
+    padding: 1.25em;
+    width: 100%;
+}
+
+header h1 {
+    text-align: center;
+}
+
+
+
+nav {
+    margin: 0.875em 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.25em;
+    list-style: none;
+}
+
+
+
+
+section {
+    margin: 1.25em 0;
+}
+
+
+/* links */
+
+a {
+    color: #98dafc;
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+/* gorilla image */
+
+#gorilla {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+}
+
+#gorilla img {
+    width: 100%;
+    max-width: 100em;
+    display: block;
+    margin: 0 auto;
+    border: 0.25em solid black;
+    padding: 0.25em;
+    background-color: white;
+}
+
+
+
+#gorilla figcaption {
+    text-align: center;
+}
+
+
+/* little images */
+
+figure {
+    display: inline-block;
+    text-align: center;
+}
+
+
+figcaption {
+    text-align: center;
+}
+
+
+/* icons */
+
+#social {
+    background: url("../images/gray-gradient.png") repeat-x;
+    border-radius: 0.5em;
+    font-size: 70%;
+    padding: 0.5em 1em;
+    margin: 0.5em 0 1em 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+#social img {
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+
+/* tables */
+
+#table-container {
+    margin: 1.5em 0;
+}
+
+#table-container h3 {
+    margin-bottom: 0.625em;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: white;
+    color: black;
+}
+
+td,
+th {
+    border: 1px solid black;
+    padding: 4px;
+}
+
+
+/* lists */
+
+ol {
+    margin: 0.625em 0;
+}
+
+ol li {
+    padding: 4px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feb 5 In class exercise</title>
+    <style>
+        #error_msg {
+            color: red;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="form" name="login" method="post" action="validate.html">
+        username:
+        <input id="username" type="text" name="username">
+        <span id="error_msg"></span><br><br>
+        <input type="submit" name="Submit" value="login">
+    </form>
+
+    <script>
+
+        // preventing js from running before page loads
+
+        window.addEventListener('DOMContentLoaded', function() {
+
+            const form = document.getElementById('form');
+            const username = document.getElementById('username');
+            const errorMsg = document.getElementById('error_msg');
+
+
+
+            form.addEventListener('submit', function(event) {
+                // checking for blank response by triming white space
+                if (!username.value.trim()) {
+                    errorMsg.textContent = "Enter a username";
+                    event.preventDefault(); // Preventing the blank answer form being submitted
+                }
+                else {
+                    errorMsg.textContent = ""; // Clearing the error if the user enters anything
+                }
+            }
+            );
+        });
+    </script>
+
+</body>
+</html>

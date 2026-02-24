@@ -72,7 +72,6 @@ function App() {
     resetGame(level);
   }
 
-
   useEffect(() => {
     // TODO: initialize the game (resetGame)
     resetGame();
@@ -81,7 +80,7 @@ function App() {
   return (
     <>
       {/* Top header bar */}
-      <div className="top-bar">
+      <div className="top-bar" style={{ backgroundColor: headerColor }}>
         <div className="title">THE GREAT</div>
         <span id="picked">{picked}</span>
         <div className="subtitle">GUESSING GAME</div>
@@ -89,22 +88,44 @@ function App() {
 
       {/* Controls */}
       <div className="controls">
-        <button id="reset">NEW COLOR</button>
+        {/* MODIFIED: connect reset button */}
+        <button id="reset" onClick={() => resetGame()}>
+          {resetText}
+        </button>
 
-        <span id="status"></span>
+        {/* MODIFIED: display status */}
+        <span id="status">{status}</span>
 
-        <button className="level selected">EASY</button>
-        <button className="level">HARD</button>
+        {/* MODIFIED: connect level buttons and dynamic selected class */}
+        <button
+          className={numOfSquares === 3 ? "level selected" : "level"}
+          onClick={() => handleLevelChange(3)}
+        >
+          EASY
+        </button>
+        <button
+          className={numOfSquares === 6 ? "level selected" : "level"}
+          onClick={() => handleLevelChange(6)}
+        >
+          HARD
+        </button>
       </div>
 
       {/* Game board */}
       <div id="container">
         <div className="squares">
-          {/*
-            TODO:
-            Render 3 or 6 <div className="square"></div>
-            using React (no DOM queries)
+          {/* 
+            TODO: Render 3 or 6 <div className="square"></div> using React (no DOM queries)
+            MODIFIED: dynamically render squares from colors array 
           */}
+          {colors.map((color, index) => (
+            <div
+              key={index}
+              className="square"
+              style={{ backgroundColor: color }}
+              onClick={() => handleSquareClick(color)}
+            />
+          ))}
         </div>
       </div>
     </>
